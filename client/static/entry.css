@@ -1,0 +1,97 @@
+body {
+	/*background-color: none;*/
+	background-image: url('./../static/images/celtic_bkg.jpg');
+	/*background-size: cover;*/
+}
+
+form {
+	background-color: #06091F;
+	border-radius: 50px;
+	border: 4px double #010E6E;
+	display: inline-block;
+	width: 350px;
+	padding: 10px;
+	margin-bottom: 50px;
+	margin-right: 50px;
+	margin-left: 20px;
+	box-shadow: 0px 0px 5px 5px #010E6E;
+}
+
+label {
+	width: 100px;
+	text-align: right;
+	margin-right: 5px;
+	padding: 5px;
+	color: white;
+	display: inline-block;
+}
+
+input[type=text] {
+	border-radius: 10px;
+	text-align: center;
+	border: none;
+	border-bottom: 3px double #1EFC26;
+	/*background-image: url('./../static/images/bio1.png');*/
+    /*background-position: 10px 10px; */
+    /*background-repeat: no-repeat;*/
+}
+
+input[type=number] {
+	border-radius: 10px;
+	text-align: center;
+	border: none;
+	border-bottom: 3px double purple;
+}
+
+input[type=text]:focus {
+	border-radius: 10px;
+	text-align: center;
+	background-color: #010E6E;
+	color: red;
+	border: none;
+	border-bottom: 3px double #1EFC26;
+}
+
+input[type=number]:focus {
+	border-radius: 10px;
+	text-align: center;
+	background-color: #010E6E;
+	color: red;
+	border: none;
+	border-bottom: 3px double #1EFC26;
+}
+
+.selects_labels {
+	width: 55px;
+	display: inline-block;
+	margin: 5px 0px 0px 0px;
+}
+.selects {
+	display: inline-block;
+}
+
+#add {
+	border-radius: 100%;
+	width: 35px;
+	height: 37px;
+	margin-top: 10px;
+	border: 2px solid black;
+	background-image: url('./../static/images/small_bio.png');
+	background-repeat: no-repeat;
+}
+
+#add:hover {
+	border-radius: 100%;
+	width: 35px;
+	height: 37px;
+	margin-top: 10px;
+	border: 2px solid #1EFC26;
+	background-image: url('./../static/images/small_bio.png');
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 2px 5px #01128F;
+}
+
+.selects:focus {
+	background-color: #010E6E;
+	color: red;
+}

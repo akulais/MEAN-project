@@ -1,0 +1,63 @@
+body {
+	background-image: url('./../static/images/slate_bkg.jpg');
+	/*background-size: cover;*/
+}
+
+#pickles {
+	background-image: url('./../static/images/slate_bkg.jpg');
+	border-radius: 75px;
+	border: 4px double #0C0D0C;
+	display: inline-block;
+	width: 75%;
+	min-width: 325px;
+	max-width: 500px;
+	padding: 10px;
+	margin-bottom: 50px;
+	margin-right: 50px;
+	margin-left: 20px;
+	box-shadow: 0px 0px 15px 10px #0C0D0C;
+}
+
+h3 {
+	width: 175px;
+	text-align: right;
+	margin: 0px;
+	margin-right: 5px;
+	color: white;
+	display: inline-block;
+	padding: 0px;
+}
+
+h2 {
+	color: #6E0303
+}
+
+.show {
+	color: #A30B0B;
+	text-align: left;
+}
+
+.entry {
+	margin-bottom: 10px;
+}
+
+#save {
+	border-radius: 100%;
+	width: 35px;
+	height: 37px;
+	margin-top: 10px;
+	border: 2px solid black;
+	background-image: url('./../static/images/small_bio.png');
+	background-repeat: no-repeat;
+}
+
+#save:hover {
+	border-radius: 100%;
+	width: 35px;
+	height: 37px;
+	margin-top: 10px;
+	border: 2px solid #052433;
+	background-image: url('./../static/images/small_bio.png');
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 2px 5px #0C0D0C;
+}

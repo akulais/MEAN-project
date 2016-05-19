@@ -1,0 +1,109 @@
+body {
+	background-image: url('./../static/images/green.jpg');
+	/*background-size: cover;*/
+	color: white;
+}
+
+#current_info {
+	border: 5px double green;
+	padding: 15px;
+	width: 65%;
+	border-radius: 10%;
+	margin: 0 auto;
+	background-image: url('./../static/images/green.jpg');
+	background-size: cover;
+	margin-bottom: 15px;
+}
+
+h4 {
+	width: 50%;
+	color: green;
+	border: 1px solid green;
+	border-radius: 25%;
+	/*box-shadow: 0px 0px 10px 10px;*/
+	background-color: #0AC200;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+h4:hover {
+	width: 50%;
+	color: blue;
+	border: 1px solid blue;
+	border-radius: 25%;
+	/*box-shadow: 0px 0px 10px 10px red;*/
+	/*background-color: green;*/
+	margin: 0 auto;
+	margin-bottom: 20px;
+	background-image: url('./../static/images/water_bkg.jpg');
+	background-size: cover;
+}
+
+#saved_info {
+	border: 4px double blue;
+	margin: 0 auto;
+	margin-top: 15px;
+	width: 30%;
+	border-radius: 25%;
+	box-shadow: 0px 0px 10px 5px #0424D6;
+	padding: 5px;
+	background-image: url('./../static/images/water_bkg.jpg');
+	background-size: cover;
+}
+
+#saved_info p {
+	text-align: center;
+	color: orange;
+	margin: 0 auto;
+}
+
+.soldiers {
+	border: 2px solid red;
+	width: 150px;
+	height: 175px;
+	padding: 35px 10px;
+	display: inline-block;
+	margin: 10px;
+	border-radius: 10px;
+	background-image: url('./../static/images/water_bkg.jpg');
+	background-size: cover;
+}
+
+.bars {
+	width: 45px;
+	height: 45px;
+	/*border: 1px solid black;*/
+	margin: 0 auto;
+	margin-top: 15px;
+	vertical-align: bottom;
+	display: inline-block;
+
+}
+
+.bars p {
+	color: black;
+	font-weight: bold;
+}
+
+.stats {
+	border: 1px solid black;
+	width: 45px;
+	height: 45px;
+	vertical-align: bottom;
+	display: inline-block;
+	border-radius: 15px;
+}
+
+.a_name {
+	color: red;
+	/*margin-bottom: 25px;*/
+	display: block;
+}
+
+img {
+	width:100px;
+	height:100px;
+	border: 2px solid red;
+	border-radius: 10px;
+	box-shadow: 0px 0px 50px 2px red;
+	}

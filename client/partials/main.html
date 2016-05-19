@@ -1,0 +1,78 @@
+<title>Main page</title>
+<link rel='stylesheet' href='./static/index.css'>
+<link rel='stylesheet' href='./static/main_style.css'>
+
+
+<div ng-controller="mainController">
+<div ng-repeat='trip in trips'>
+<div id="current_info">
+
+	<h1>Today's date : {{ date | date : 'dd MMM yyyy' }}</h1>
+	<h1>Current time : {{ date | date : 'HH:mm' | date : timezone }}</h1>
+	<h1>Current temp : {{ response.list[0].main.temp }}</h1>
+
+</div>
+
+	<h4>Event start</h4>
+<div id="saved_info">
+
+	<p>City : {{ trip.city }}</p>
+	<p>Longitude : {{ trip.lon }}</p>
+	<p>Latitude : {{ trip.lat }}</p>
+	<p>Current temp : {{ trip.temp }}</p>
+	<p>Ground level : {{ trip.ground }}</p>
+	<p>Sea Level : {{ trip.sea_level }}</p>
+	<p>Pressure : {{ trip.pressure }}</p>
+	<p>Humidity : {{ trip.humidity }}%</p>
+	<p>Wind : {{ trip.wind_speed }}, direction {{ trip.wind_direction }}</p>
+	<p>Clouds : {{ trip.clouds}}</p>
+	<p style="color:red">Info as of : {{ trip.created_at | date : format : timezone }}</p>
+	<br>
+</div>
+
+</div>
+<br>
+Select team : <select ng-model="filter_team">
+    <option ng-repeat='(key, value) in soldiers | groupBy: "team"'>{{ key }}</option>
+    </select><br><br>
+
+<div class="soldiers" ng-repeat='soldier in soldiers | filter: filter_team' href>
+
+	<img src='{{ soldier.image }}'>
+
+	<div class='bars' ng-model='soldier.ammo'>
+		<div class="stats" ng-if="soldier.ammo == 'green'" style="background-color:green"><p>ammo</p>
+		</div>
+		<div class="stats" ng-if="soldier.ammo == 'yellow'" style="background-color:yellow"><p>ammo</p>
+		</div>
+		<div class="stats" ng-if="soldier.ammo == 'red'" style="background-color:red"><p>ammo</p>
+		</div>
+		<div class="stats" ng-if="soldier.ammo == 'black'" style="background-color:black"><p style="color:white;">ammo</p>
+		</div>
+	</div>
+
+	<div class="bars" ng-model="soldier.water">
+		<div class="stats" ng-if="soldier.water == 'green'" style="background-color:green"><p>water</p>
+		</div>
+		<div class="stats" ng-if="soldier.water == 'yellow'" style="background-color:yellow"><p>water</p>
+		</div>
+		<div class="stats" ng-if="soldier.water == 'red'" style="background-color:red"><p>water</p>
+		</div>
+		<div class="stats" ng-if="soldier.water == 'black'" style="background-color:black"><p style="color:white;">water</p>
+		</div>
+	</div>
+
+	<div class="bars" ng-model="soldier.food">
+		<div class="stats" ng-if="soldier.food == 'green'" style="background-color:green"><p>food</p>
+		</div>
+		<div class="stats" ng-if="soldier.food == 'yellow'" style="background-color:yellow"><p>food</p>
+		</div>
+		<div class="stats" ng-if="soldier.food == 'red'" style="background-color:red"><p>food</p>
+		</div>
+		<div class="stats" ng-if="soldier.food == 'black'" style="background-color:black"><p style="color:white;">food</p>
+		</div>
+	</div>
+
+	<a class="a_name" href="/#/update_soldier/{{soldier._id}}">{{ soldier.rank}} {{ soldier.name }} </a>
+	
+</div>

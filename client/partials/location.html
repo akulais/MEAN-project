@@ -1,0 +1,53 @@
+<title>Location page</title>
+<link rel='stylesheet' href='./static/index.css'>
+<link rel='stylesheet' href='./static/location_style.css'>
+<div id="pickles" ng-controller="locationController">
+
+<div class="entry">
+<!-- <p style="color:red" style="font-weight:bold">{{ error.message }}</p><br> -->
+    <h2>Location</h2> 
+    <!-- debounce will help prevent useless api calls -->
+        <input type="text"  ng-model-options="{ debounce: 800 }" ng-model="weather.location" placeholder="City, State">
+
+        <input type="submit" ng-click="getWeather()" value="Search">
+</div>
+
+<h3>City name:</h3>	<h3 class="show">	{{ response.city.name }}</h3>
+<h3>Country:</h3>	<h3 class="show">	{{ response.city.country }}</h3>				
+<h3>Longitude:</h3>	<h3 class="show">	{{ response.city.coord.lon }}</h3>			
+<h3>Latitude:</h3>	<h3 class="show">	{{ response.city.coord.lat }}</h3>				
+<h3>Ground level:</h3>	<h3 class="show">	{{ response.list[0].main.grnd_level }}</h3>			
+<h3>Humidity:</h3>	<h3 class="show"> 	{{ response.list[0].main.humidity }}</h3>				
+<h3>Barometric pressure:</h3>	<h3 class="show">	{{ response.list[0].main.pressure }}</h3> 	
+<h3>Sea level:</h3>	<h3 class="show">	{{ response.list[0].main.sea_level }}</h3>				
+<h3>Temperature:</h3>	<h3 class="show">	{{ response.list[0].main.temp }}</h3>			
+<h3>Max temp:</h3>	<h3 class="show">	{{ response.list[0].main.temp_max }}</h3>				
+<h3>Min temp:</h3>	<h3 class="show">	{{ response.list[0].main.temp_min }}</h3>				
+<h3>Wind speed:</h3>	<h3 class="show">	{{ response.list[0].wind.speed }}</h3>			
+<h3>Wind direction:</h3>	<h3 class="show">	{{ response.list[0].wind.deg }}</h3>		
+<h3>Clouds:</h3>	<h3 class="show">	{{ response.list[0].weather[0].description }}</h3>				
+
+<form>	
+	<input type='hidden' ng-value="trip.city= response.city.name">	
+	<input type="hidden" ng-value="trip.country= response.city.country">		
+	<input type="hidden" ng-value="trip.lon= response.city.coord.lon">
+	<input type="hidden" ng-value="trip.lat= response.city.coord.lat">
+	<input type="hidden" ng-value="trip.ground= response.list[0].main.grnd_level">		
+	<input type="hidden" ng-value="trip.humidity= response.list[0].main.humidity">
+	<input type="hidden" ng-value="trip.pressure= response.list[0].main.pressure">
+	<input type="hidden" ng-value="trip.sea_level= response.list[0].main.sea_level">
+	<input type="hidden" ng-value="trip.temp= response.list[0].main.temp">	
+	<input type="hidden" ng-value="trip.temp_max= response.list[0].main.temp_max">		
+	<input type="hidden" ng-value="trip.temp_min= response.list[0].main.temp_min">
+	<input type="hidden" ng-value="trip.wind_speed= response.list[0].wind.speed">
+	<input type="hidden" ng-value="trip.wind_direction= response.list[0].wind.deg">
+	<input type="hidden" ng-value="trip.clouds= response.list[0].weather[0].description">
+
+<input id="save" type="submit" ng-click="saveWeather()" value="">
+</form>
+
+
+
+
+
+</div>

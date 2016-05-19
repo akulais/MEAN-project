@@ -1,0 +1,69 @@
+<title>Team member entry/update</title>
+<link rel='stylesheet' href='./static/index.css'>
+<link rel='stylesheet' href='./static/entry.css'>
+<div ng-controller="soldierController">
+
+<form>
+    <label>Rank:</label>
+    <input id="rank" type="text" ng-model="soldiers.rank" placeholder="rank">
+
+    <label>Name:</label>
+    <input id="name" type="text" ng-model="soldiers.name" placeholder="name">
+    
+    <label>Team number:</label>
+    <input id="team_number" type="text" ng-model="soldiers.team" placeholder="team">
+    
+    <label>Position:</label>
+    <input type="text" ng-model="soldiers.position" placeholder="position">
+
+    <label>MOS:</label>
+    <input type="text" ng-model="soldiers.mos" placeholder="mos">
+    
+    <label>Sex:</label>
+    <input type="text" ng-model="soldiers.sex" placeholder="sex">   
+    <label>Weight:</label>
+    <input type="number" ng-model="soldiers.weight" placeholder="weight">
+    
+    <label>Height:</label>
+    <input type="number" ng-model="soldiers.height" placeholder="height">
+    
+    <label>Age:</label>
+    <input type="number" ng-model="soldiers.age" placeholder="age">
+    
+    <label>Blood Type:</label>
+    <input type="text" ng-model="soldiers.blood_type" placeholder="blood type">
+    
+    <label>Allergies:</label>
+    <input type="text" ng-model="soldiers.allergies" placeholder="allergies">
+
+    <label>Image:</label>
+    <input type="text" ng-model="soldiers.image" placeholder="image url">
+
+    
+    <label class="selects_labels">Water : </label>
+        <select class="selects" ng-model='soldiers.water'>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="red">red</option>
+            <option value="black">black</option>
+        </select><br>
+
+    <label class="selects_labels">Ammo : </label>
+        <select class="selects" ng-model='soldiers.ammo'>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="red">red</option>
+            <option value="black">black</option>
+        </select><br>
+
+    <label class="selects_labels">Food : </label>
+        <select class="selects" ng-model='soldiers.food'>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="red">red</option>
+            <option value="black">black</option>
+        </select><br>
+            
+        <input id="add" type="submit" ng-click="addSoldier()" value="">
+</form>
+</div>

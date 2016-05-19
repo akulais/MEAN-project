@@ -1,0 +1,47 @@
+<title>Update soldier page</title>
+<link rel='stylesheet' href='./static/index.css'>
+<link rel='stylesheet' href='./static/update_style.css'>
+
+<div ng-controller="updateController">
+
+<div id="soldier" ng-repeat="soldier in soldiers">
+
+<h1>{{ soldier.rank }} {{ soldier.name }}</h1>
+<h3 style="color:white;font-weight:bold;">Allergies: {{ soldier.allergies }}</h3>
+<button id="delete" type="submit" ng-click='retire(soldier)'>Remove</button><br>
+<img src="{{soldier.image}}"><br>
+
+<div class="levels">
+<label>Water : </label>
+<select ng-model='soldier.water'>
+	<option style="color:white;background-color: green;" value="green">green</option>
+	<option style="color:white;background-color: orange;" value="yellow">yellow</option>
+	<option style="color:white;background-color: red;" value="red">red</option>
+	<option style="color:white;background-color: black;" value="black">black</option>
+</select>
+</div>
+
+<div class="levels">
+<label>Ammo : </label>
+<select ng-model='soldier.ammo'>
+	<option style="color:white;background-color: green;" value="green">green</option>
+	<option style="color:white;background-color: orange;" value="yellow">yellow</option>
+	<option style="color:white;background-color: red;" value="red">red</option>
+	<option style="color:white;background-color: black;" value="black">black</option>
+</select>
+</div>
+
+<div class="levels">
+<label>Food : </label>
+<select ng-model='soldier.food'>
+	<option style="color:white;background-color: green;" value="green">green</option>
+	<option style="color:white;background-color: orange;" value="yellow">yellow</option>
+	<option style="color:white;background-color: red;" value="red">red</option>
+	<option style="color:white;background-color: black;" value="black">black</option>
+</select>
+</div><br>
+<input id="submit" type="submit" ng-click='update(soldier)'>
+
+</div>
+
+</div>
