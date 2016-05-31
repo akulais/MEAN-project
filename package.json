@@ -1,5 +1,5 @@
 {
-  "name": "dojo_message",
+  "name": "mean-project",
   "description": "Mongoose model relationships and messages",
   "dependencies": {
     "angular-moment": "^1.0.0-beta.6",
