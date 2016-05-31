@@ -143,7 +143,7 @@ patrol_app.factory('WeatherFactory', function($http) {
 
             var location = $scope.trips[0].city;
             console.log('location', location);
-            var APIID = "";
+            var APIID = "&APPID=4e08b09060ec74856552b7ea85960550";
             $http.get("http://api.openweathermap.org/data/2.5/forecast/city?q=" + location + '&units=imperial' + APIID
             ).success(function(data, status) {
                 console.log(data);
